@@ -82,7 +82,7 @@ public class Create {
                 }
 
                 if (price.isEmpty()) {
-                    JOptionPane.showMessageDialog(frame, "Name can't be null!");
+                    JOptionPane.showMessageDialog(frame, "Price can't be null!");
                     continue;
                 }
 
@@ -107,7 +107,7 @@ public class Create {
                 }
 
                 if (stock.isEmpty()) {
-                    JOptionPane.showMessageDialog(frame, "Name can't be null!");
+                    JOptionPane.showMessageDialog(frame, "Stock can't be null!");
                     continue;
                 }
 
