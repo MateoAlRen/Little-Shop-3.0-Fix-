@@ -1,56 +1,63 @@
-# Little-Shop-2.0
-# Inventory Management System  
+# Product Management CRUD Application
 
-This project is a **Java-based inventory management system** built with Object-Oriented Programming (OOP) principles and modular design.  
-It uses **ArrayList** and **HashMap** for data storage and provides user interaction through **JOptionPane** dialogs.  
+[![Java](https://img.shields.io/badge/Java-17+-blue)](https://www.java.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-8+-green)](https://www.mysql.com/)
 
----
-
-## 🎯 Features  
-
-### 1. Add Product  
-- Asks for product type (**Food / Electrical Appliance**)  
-- Requests **name, price, and stock**  
-- Validates that there are no duplicate names  
+A Java desktop application for managing products with **Create, Read, Update, Delete, and Search** operations, using a MySQL database and a Swing GUI.
 
 ---
 
-### 2. List Inventory  
-- Iterates through **ArrayList** and **HashMap**  
-- Displays product **name, price, stock, and description**  
+## Features
+
+- **Create Product**: Add new products (Food or Electrical Appliance) with validated name, price, and stock.
+- **Read Products**: Display all products with ID, Name, Price, and Stock.
+- **Update Product**: Update Name, Price, or Stock of an existing product by ID.
+- **Delete Product**: Delete a product by ID with confirmation.
+- **Search Product**: Find a product by ID and display its details.
+- **Exit**: Shows a summary of actions performed (Created, Updated, Searched, Deleted).
 
 ---
 
-### 3. Purchase Product  
-- Requests **product name** and **quantity**  
-- Validates stock availability and updates it  
-- Generates a **partial purchase ticket**  
+## Technologies
+
+- Java 17+
+- Swing GUI
+- MySQL
+- JDBC
 
 ---
 
-### 4. Inventory Statistics  
-- Finds the **most expensive product**  
-- Finds the **cheapest product**  
+## Database Setup
 
----
+1. Create a MySQL database named `ProductsCrud`.
+2. Create the `Products` table:
 
-### 5. Search Product  
-- Allows **partial name matches** when searching products  
-
----
-
-### 6. Exit  
-- Shows the **final ticket** with the total purchases  
-
----
-
-## 🛠️ Technologies Used  
-- **Java 17+**  
-- **Swing (JOptionPane)** for UI dialogs  
-- **OOP Concepts**: Abstraction, Inheritance, Encapsulation, Polymorphism  
-- **Data Structures**: ArrayList, HashMap  
-
----
+```sql
+CREATE TABLE Products (
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL,
+    product_price DOUBLE NOT NULL,
+    product_stock INT NOT NULL
+);
+```
+## Update credentials in ConfigDB.java:
+String url = "jdbc:mysql://localhost:3306/ProductsCrud";
+String user = "root";
+String password = "YOUR_PASSWORD";
 
 
+## How to Run:
 
+Clone the repository or copy the project files.
+
+Open in an IDE (IntelliJ, Eclipse, etc.).
+
+Ensure MySQL is running.
+
+## Notes
+
+All interactions use Swing dialogs.
+
+Designed for simple desktop CRUD management.
+
+Extendable for additional product types or features.
