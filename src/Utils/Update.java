@@ -34,7 +34,7 @@ public class Update {
                 JTextField textField = new JTextField(10);
                 int option = JOptionPane.showConfirmDialog(
                         frame,
-                        new Object[]{"Write ID of the that do you wan to Update:", textField},
+                        new Object[]{"Write the ID of the product that do you want to update:", textField},
                         "Find Product",
                         JOptionPane.OK_CANCEL_OPTION,
                         JOptionPane.QUESTION_MESSAGE
